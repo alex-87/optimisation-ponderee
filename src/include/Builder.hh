@@ -9,7 +9,7 @@ class Builder : public BuilderAbstract {
 
 public:
 
-	Builder();
+	Builder(const std::istream& entry);
 
 	void Initialize();
 

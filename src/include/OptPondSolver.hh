@@ -15,13 +15,19 @@ public:
 
 	OptPondSolver();
 
+	OptPondSolver(bool share, OptPondSolver& optPondSolver);
+
 	void addConstraint(const ConstraintAbstract& constraint);
+
+	virtual Gecode::Space * copy(bool share);
 
 	~OptPondSolver();
 
 protected:
 
 	std::vector<ConstraintAbstract> listConstraint;
+
+	Gecode::IntVarArray sol;
 
 };
 
