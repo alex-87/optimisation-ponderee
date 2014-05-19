@@ -10,15 +10,17 @@ class BuilderAbstract {
 
 public:
 
-	virtual void Initialize(std::istream& entry) = 0;
+	BuilderAbstract(const std::istream& entry);
 
-	virtual OptPondSolver& release(void);
+	virtual void Initialize() = 0;
+
+	virtual OptPondSolver& release(void) const = 0;
 
 	virtual ~BuilderAbstract();
 
 protected:
 
-	std::istream& _entry;
+	const std::istream& _entry;
 
 };
 
