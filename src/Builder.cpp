@@ -25,6 +25,8 @@ Builder::Builder(std::istream& entry) : BuilderAbstract(entry) {
 		counter++;
 	};
 
+	counter--;
+
 	_optPondSolver = new OptPondSolver(counter);
 }
 

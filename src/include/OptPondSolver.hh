@@ -14,7 +14,7 @@ class OptPondSolver : public Gecode::Space {
 
 public:
 
-	OptPondSolver(const int& nbrElements);
+	OptPondSolver(int nbrElements);
 
 	OptPondSolver(bool share, OptPondSolver& optPondSolver);
 
@@ -26,9 +26,11 @@ public:
 
 	~OptPondSolver();
 
+	void lireSolution(void) const;
+
 public:
 
-	const int&          _nbrElements;
+	int                 _nbrElements;
 
 	Gecode::IntVarArray _sol;
 
