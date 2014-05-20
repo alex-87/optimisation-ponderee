@@ -12,17 +12,20 @@ public:
 
 	ConstraintRelation(const std::vector<int>& baseList,
 					   const std::vector<int>& coefficientList,
+					   const int& coeffRest,
 					   const int& totalCoefficient);
 
 	void activeConstraint(OptPondSolver& optPondSolver);
 
 protected:
 
-	const int&              _totalCoefficient;
-
 	const std::vector<int>& _baseList;
 
 	const std::vector<int>& _coefficientList;
+
+	const int&				_coeffRest;
+
+	const int&              _totalCoefficient;
 
 };
 

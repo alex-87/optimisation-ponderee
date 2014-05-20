@@ -13,15 +13,17 @@ public:
 
 	void Initialize();
 
-	OptPondSolver& release() const;
+	OptPondSolver * release() const;
 
 	~Builder();
 
 protected:
 
-	OptPondSolver * _optPondSolver;
+	OptPondSolver *  _optPondSolver;
 
-	int             _reste;
+	int              _reste;
+
+	int              _coefficientPondere;
 
 	std::vector<int> _coefficients;
 

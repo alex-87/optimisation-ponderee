@@ -9,7 +9,10 @@ Builder::Builder(std::istream& entry) : BuilderAbstract(entry) {
 	_entry >> r1;
 	_entry >> r2;
 
-	_reste = (r1 * r2);
+	_reste              = r2;
+	_coefficientPondere = (r1 * r2);
+
+
 
 	int counter = 0;
 	while( _entry ) {
@@ -32,13 +35,13 @@ Builder::Builder(std::istream& entry) : BuilderAbstract(entry) {
 
 void Builder::Initialize() {
 
-	ConstraintRelation * constraint = new ConstraintRelation(_bases, _coefficients, _reste);
+	ConstraintRelation * constraint = new ConstraintRelation(_bases, _coefficients, _reste, _coefficientPondere);
 	_optPondSolver->addConstraint( *constraint );
 	_optPondSolver->branchement();
 }
 
-OptPondSolver& Builder::release() const {
-	return *_optPondSolver;
+OptPondSolver * Builder::release() const {
+	return _optPondSolver;
 }
 
 Builder::~Builder() {

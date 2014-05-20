@@ -14,7 +14,7 @@ public:
 
 	virtual void Initialize() = 0;
 
-	virtual OptPondSolver& release(void) const = 0;
+	virtual OptPondSolver * release(void) const = 0;
 
 	virtual ~BuilderAbstract();
 

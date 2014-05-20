@@ -5,16 +5,13 @@
 #include "include/ConstraintAbstract.hh"
 
 OptPondSolver::OptPondSolver(int nbrElements) :
-	_sol(*this, nbrElements, 0, 20) {
+	_sol(*this, nbrElements, 0, 4) {
 
 	_nbrElements = nbrElements;
-
-	std::cout << "Constructeur OptPondSolver: " << _nbrElements << std::endl;
 
 }
 
 void OptPondSolver::addConstraint(ConstraintAbstract& constraint) {
-	std::cout << "AddConstraint: " << _nbrElements << std::endl;
 	constraint.activeConstraint( *this );
 }
 
@@ -37,11 +34,18 @@ Gecode::Space * OptPondSolver::copy(bool share) {
 	return opt;
 }
 
-void OptPondSolver::lireSolution() const {
+std::vector<int>& OptPondSolver::lireSolution() const {
 
+	/*
 	for(int i=0; i<_sol.size(); i++) {
 		std::cout << _sol[i] << std::endl;
-	}
+	}*/
+
+	std::vector<int> * v = new std::vector<int>();
+	for(int i=0; i < _sol.size(); i++)
+		v->push_back( _sol[i].val() );
+
+	return *v;
 
 }
 

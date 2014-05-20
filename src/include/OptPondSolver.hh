@@ -26,7 +26,7 @@ public:
 
 	~OptPondSolver();
 
-	void lireSolution(void) const;
+	std::vector<int>& lireSolution(void) const;
 
 public:
 
