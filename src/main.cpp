@@ -14,7 +14,7 @@ inline void displayVec(std::vector<int>& vec) {
 
 int main(int argc, char *argv[]) {
 
-	Builder * builder = new Builder(std::cin);
+	BuilderAbstract * builder = new Builder(std::cin);
 	builder->Initialize();
 	OptPondSolver * optPondSolver = builder->release();
 
