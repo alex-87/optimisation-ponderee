@@ -2,7 +2,7 @@
 #include "include/Builder.hh"
 
 Builder::Builder(const std::istream& entry) : BuilderAbstract(entry) {
-	_optPondSolver = new OptPondSolver();
+	_optPondSolver = new OptPondSolver(0);
 }
 
 void Builder::Initialize() {

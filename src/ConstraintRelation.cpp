@@ -11,9 +11,9 @@ ConstraintRelation::ConstraintRelation(const std::vector<int>& baseList, const s
 void ConstraintRelation::activeConstraint(OptPondSolver& optPondSolver) const {
 
 	int sum = 0;
-	Gecode::IntArgs c( _baseList.size() );
+	Gecode::IntArgs c( optPondSolver._nbrElements );
 
-	for(unsigned int i=0; i<_baseList.size(); i++) {
+	for(unsigned int i=0; i<optPondSolver._nbrElements; i++) {
 		sum += (_baseList[i] * _coefficientList[i]);
 		c[i] = _coefficientList[i];
 	};
