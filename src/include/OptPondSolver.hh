@@ -19,15 +19,15 @@ public:
 
 	void addConstraint(const ConstraintAbstract& constraint);
 
+	void branchement();
+
 	virtual Gecode::Space * copy(bool share);
 
 	~OptPondSolver();
 
 protected:
 
-	std::vector<ConstraintAbstract> listConstraint;
-
-	Gecode::IntVarArray sol;
+	Gecode::IntVarArray _sol;
 
 };
 
