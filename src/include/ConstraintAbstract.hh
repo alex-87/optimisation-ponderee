@@ -3,15 +3,13 @@
 #ifndef CONSTRAINTABSTRACT_HH_
 #define CONSTRAINTABSTRACT_HH_
 
-class OptPondSolver;
+#include "OptPondSolver.hh"
 
 class ConstraintAbstract {
 
 public:
 
-	ConstraintAbstract();
-
-	virtual void activeConstraint(const OptPondSolver& optPondSolver) const = 0;
+	virtual void activeConstraint(OptPondSolver& optPondSolver) const = 0;
 
 	virtual ~ConstraintAbstract();
 

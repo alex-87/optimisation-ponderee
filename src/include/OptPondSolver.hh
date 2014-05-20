@@ -7,7 +7,8 @@
 #include <gecode/driver.hh>
 #include <gecode/search.hh>
 
-#include "ConstraintAbstract.hh"
+//#include "ConstraintAbstract.hh"
+class ConstraintAbstract;
 
 class OptPondSolver : public Gecode::Space {
 
@@ -25,7 +26,7 @@ public:
 
 	~OptPondSolver();
 
-protected:
+public:
 
 	Gecode::IntVarArray _sol;
 

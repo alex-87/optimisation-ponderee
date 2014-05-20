@@ -1,5 +1,6 @@
 
 #include "include/OptPondSolver.hh"
+#include "include/ConstraintAbstract.hh"
 
 OptPondSolver::OptPondSolver() {
 
