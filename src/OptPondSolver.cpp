@@ -8,7 +8,7 @@ OptPondSolver::OptPondSolver(const int& nbrElements) :
 
 }
 
-void OptPondSolver::addConstraint(const ConstraintAbstract& constraint) {
+void OptPondSolver::addConstraint(ConstraintAbstract& constraint) {
 	constraint.activeConstraint( *this );
 }
 

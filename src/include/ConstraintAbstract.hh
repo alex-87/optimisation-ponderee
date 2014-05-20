@@ -9,7 +9,7 @@ class ConstraintAbstract {
 
 public:
 
-	virtual void activeConstraint(OptPondSolver& optPondSolver) const = 0;
+	virtual void activeConstraint(OptPondSolver& optPondSolver) = 0;
 
 	virtual ~ConstraintAbstract();
 

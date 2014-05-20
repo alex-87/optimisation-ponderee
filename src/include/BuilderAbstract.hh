@@ -10,7 +10,7 @@ class BuilderAbstract {
 
 public:
 
-	BuilderAbstract(const std::istream& entry);
+	BuilderAbstract(std::istream& entry);
 
 	virtual void Initialize() = 0;
 
@@ -20,7 +20,7 @@ public:
 
 protected:
 
-	const std::istream& _entry;
+	std::istream& _entry;
 
 };
 

@@ -14,7 +14,7 @@ public:
 					   const std::vector<int>& coefficientList,
 					   const int& totalCoefficient);
 
-	virtual void activeConstraint(OptPondSolver& optPondSolver) const = 0;
+	void activeConstraint(OptPondSolver& optPondSolver);
 
 protected:
 

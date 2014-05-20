@@ -18,7 +18,7 @@ public:
 
 	OptPondSolver(bool share, OptPondSolver& optPondSolver);
 
-	void addConstraint(const ConstraintAbstract& constraint);
+	void addConstraint(ConstraintAbstract& constraint);
 
 	void branchement();
 

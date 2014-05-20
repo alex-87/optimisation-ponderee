@@ -9,7 +9,7 @@ class Builder : public BuilderAbstract {
 
 public:
 
-	Builder(const std::istream& entry);
+	Builder(std::istream& entry);
 
 	void Initialize();
 
@@ -20,6 +20,12 @@ public:
 protected:
 
 	OptPondSolver * _optPondSolver;
+
+	int             _reste;
+
+	std::vector<int> _coefficients;
+
+	std::vector<int> _bases;
 
 };
 
